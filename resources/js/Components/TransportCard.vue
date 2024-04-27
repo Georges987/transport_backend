@@ -1,15 +1,22 @@
 <script setup>
+import { router } from '@inertiajs/vue3'
 
-defineProps({
+
+/* defineProps({
   titleTransport: String,
   transporter:String,
   transporterStatus: String,
   delayTransport: String,
-})
+}), */
+
+  function handleClick() {
+    router.visit('/details',); // Replace '/new-page' with your actual route
+  }
+
 </script>
 
 <template>
-    <div class="bg-white my-4 overflow-hidden shadow-sm rounded-lg">
+    <div class="bg-white my-4 overflow-hidden shadow-sm rounded-lg" @click="handleClick">
         <div class="relative ">
         <p class="absolute top-1 right-1 p-2 rounded-lg bg-yellow-400 text-white font-semibold ">Pro</p><br>
      </div>

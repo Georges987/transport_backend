@@ -1,8 +1,30 @@
 <script setup>
+import { ref } from 'vue';
 import { Head, useForm } from '@inertiajs/vue3';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
-import TextInput from '@/Components/TextInput.vue';
+import Modal from '@/Components/Modal.vue';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
+
+const isShowable = ref(false)
+const secondIsShowable = ref(false)
+const thirdIsShowable = ref(false)
+const canPay = ref(false)
+const isCloseable = ref(false)
+
+function handlePay() {
+  canPay.value = true
+  isShowable.value = false
+}
+
+function canParticipate () {
+  isShowable.value = false
+  thirdIsShowable.value = true
+}
+
+function handleNotif() {
+  secondIsShowable.value = false
+  thirdIsShowable.value = false
+}
 </script>
 
 <template>
@@ -36,11 +58,58 @@ import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
    </div>
   <p ><span class="font-semibold m-2">J'ai des gilets de sauvetage pour vous:</span>Oui</p>
    <div class=" mt-4 flex flex-row justify-center">
-    <PrimaryButton class="">
-                            Valider votre présence
+    <PrimaryButton class="" @click="isShowable = !isShowable">
+                            <p v-if="!canPay">Valider votre présence</p>
+                            <p v-else>Validé!</p>
                         </PrimaryButton>
    </div>
         </div>
+        <Modal :show="isShowable" :closeable="isCloseable">
+          <div>
+            <PrimaryButton class="absolute top-0 right-0" @click="isShowable = !isShowable">
+              x
+            </PrimaryButton>
+          </div>
+          <p class="m-6">Pouvez vous payer en ligne?</p>
+          <p></p>
+          <div class="flex flex-row justify-end">
+            <button class="bg-red-400 mx-1 inline-flex items-center px-4 py-2 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest  focus:outline-none  transition ease-in-out duration-150" @click="canParticipate
+">
+              Non
+            </button>
+            <PrimaryButton @click="handlePay">
+              Oui
+            </PrimaryButton>
+           
+          </div>
+        </Modal>
+        <Modal :show="thirdIsShowable" :closeable="isCloseable">
+          <div>
+            <PrimaryButton class="absolute top-0 right-0" @click="thirdIsShowable = !thirdIsShowable">
+              x
+            </PrimaryButton>
+          </div>
+          <p class="m-6">Souhaitez vous quand même participer?</p>
+          <p></p>
+          <div class="flex flex-row justify-end">
+            <button class="bg-red-400 mx-1 inline-flex items-center px-4 py-2 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest  focus:outline-none  transition ease-in-out duration-150" @click="thirdIsShowable = !thirdIsShowable">
+              Non
+            </button>
+            <PrimaryButton @click="secondIsShowable = !secondIsShowable">
+              Oui
+            </PrimaryButton>
+           
+          </div>
+        </Modal>
+        <Modal :show="secondIsShowable">
+          <p class="m-6">Vous recevrez une notification sous peu</p>
+          <p class="ml-4"><span class="underline">NB:</span> Ce moyen est moins fiable et fonctionne grâce à la <span class="font-semibold">confiance mutuelle</span></p>
+          <div class="flex flex-row justify-end">
+          <PrimaryButton @click="handleNotif">
+              OK
+            </PrimaryButton>
+            </div>
+        </Modal>
     </AuthenticatedLayout>
  </div>
 </template>
