@@ -33,6 +33,10 @@ Route::get('/details', function () {
     return Inertia::render('Unauth/TransportDetails');
 })->middleware(['auth', 'verified'])->name('details');
 
+Route::get('/transporteur', function () {
+    return Inertia::render('Profile/ProfileDetail');
+})->middleware(['auth', 'verified'])->name('transporteur');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
