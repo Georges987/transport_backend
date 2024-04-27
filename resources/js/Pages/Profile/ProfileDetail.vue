@@ -28,7 +28,7 @@ function ValidateUser () {
        
         <AuthenticatedLayout>
             <template #header>
-            <h2 class="font-semibold text-xl text-[#97F887] leading-tight">Profil Transporteur</h2>
+            <h2 class="font-semibold text-xl text-green-700 leading-tight">Profil Transporteur</h2>
         </template>
            <div class="mt-4">
             <div class=" bg-white rounded-xl py-10">
@@ -67,7 +67,7 @@ function ValidateUser () {
   <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
 </svg><p class="font-semibold text-lg ">Thomas Pierre</p>
                <div>
-                <button class="bg-red-400 mx-1 inline-flex items-center px-4 py-2 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest  focus:outline-none  transition ease-in-out duration-150" @click="inValidateUser" >
+                <button class="bg-red-500 hover:bg-red-600 mx-1 inline-flex items-center px-4 py-2 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest  focus:outline-none  transition ease-in-out duration-150" @click="inValidateUser" >
               Refuser
             </button>
                 <PrimaryButton
@@ -80,7 +80,7 @@ function ValidateUser () {
             </div>
             <Modal :show="isShowable">
                 <p class="text-lg text-red-500 m-6" v-if="!validate">Client rejeté</p>
-                <p class="text-lg text-[#97F887] m-6" v-else>Client validé</p>
+                <p class="text-lg text-green-700 m-6" v-else>Client validé</p>
                 <div class="flex flex-row justify-end">
           <PrimaryButton @click=" isShowable = !isShowable">
               OK

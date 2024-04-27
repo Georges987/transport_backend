@@ -33,7 +33,7 @@ function handleNotif() {
    
     <AuthenticatedLayout>
         <template #header>
-            <h2 class="font-semibold text-xl text-[#97F887] leading-tight">Détail du trajet</h2>
+            <h2 class="font-semibold text-xl text-green-700 leading-tight">Détail du trajet</h2>
         </template>
 
         <div class="mt-8 text-lg">
@@ -47,7 +47,7 @@ function handleNotif() {
 <span class="font-semibold mr-2">Bagages possibles:</span> 1</p>
 <div class="flex flex-row items-center m-2 gap-3">
 <p class="font-semibold">Prix final:</p>
-<p class="font-semibold text-2xl text-[#97F887] ml-2">24 euros</p>
+<p class="font-semibold text-2xl text-green-700 ml-2">24 euros</p>
 </div>
 <p class="font-semibold m-2">Arrêt possible en cours de route:</p>
    <div class="ml-6">
@@ -73,7 +73,7 @@ function handleNotif() {
           <p class="m-6">Pouvez vous payer en ligne?</p>
           <p></p>
           <div class="flex flex-row justify-end">
-            <button class="bg-red-400 mx-1 inline-flex items-center px-4 py-2 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest  focus:outline-none  transition ease-in-out duration-150" @click="canParticipate
+            <button class="bg-red-500 mx-1 inline-flex items-center px-4 py-2 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest  focus:outline-none  transition ease-in-out duration-150" @click="canParticipate
 ">
               Non
             </button>
@@ -92,7 +92,7 @@ function handleNotif() {
           <p class="m-6">Souhaitez vous quand même participer?</p>
           <p></p>
           <div class="flex flex-row justify-end">
-            <button class="bg-red-400 mx-1 inline-flex items-center px-4 py-2 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest  focus:outline-none  transition ease-in-out duration-150" @click="thirdIsShowable = !thirdIsShowable">
+            <button class="bg-red-500 mx-1 inline-flex items-center px-4 py-2 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest  focus:outline-none  transition ease-in-out duration-150" @click="thirdIsShowable = !thirdIsShowable">
               Non
             </button>
             <PrimaryButton @click="secondIsShowable = !secondIsShowable">

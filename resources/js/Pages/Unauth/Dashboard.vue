@@ -17,7 +17,7 @@ const form = useForm({
 
     <AuthenticatedLayout>
         <template #header>
-            <h2 class="font-semibold text-xl text-[#97F887] leading-tight">Pirogues</h2>
+            <h2 class="font-semibold text-xl text-green-700 leading-tight">Pirogues</h2>
         </template>
 
         <div class="py-12 mx-6">
@@ -35,7 +35,7 @@ const form = useForm({
                         </div>
                 <TransportCard/>
             </div>
-            <p class="text-gray-400 text-center">Vous ne trouvez pas le trajet que vous voulez? Cliquez <span class=" underline text-[#97F887]">ici</span> pour recevoir une notification lorsqu'il sera disponible </p>
+            <p class="text-gray-400 text-center">Vous ne trouvez pas le trajet que vous voulez? Cliquez <span class=" underline text-green-700">ici</span> pour recevoir une notification lorsqu'il sera disponible </p>
         </div>
     </AuthenticatedLayout>
 </template>
