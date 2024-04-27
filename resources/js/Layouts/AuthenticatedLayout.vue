@@ -77,7 +77,7 @@ const showingNavigationDropdown = ref(false);
                         <div class="-me-2 flex items-center sm:hidden">
                             <button
                                 @click="showingNavigationDropdown = !showingNavigationDropdown"
-                                class="inline-flex items-center justify-center p-2 rounded-md text-[#20FF5E] hover:text-[#20FF5E] hover:bg-gray-100 focus:outline-none  focus:text-[#20FF5E] transition duration-150 ease-in-out"
+                                class="inline-flex items-center justify-center p-2 rounded-md text-[#97F887] hover:text-[#97F887] hover:bg-gray-100 focus:outline-none  focus:text-[#97F887] transition duration-150 ease-in-out"
                             >
                                 <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                                     <path

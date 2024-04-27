@@ -33,7 +33,7 @@ function handleNotif() {
    
     <AuthenticatedLayout>
         <template #header>
-            <h2 class="font-semibold text-xl text-[#20FF5E] leading-tight">Détail du trajet</h2>
+            <h2 class="font-semibold text-xl text-[#97F887] leading-tight">Détail du trajet</h2>
         </template>
 
         <div class="mt-8 text-lg">
@@ -47,7 +47,7 @@ function handleNotif() {
 <span class="font-semibold mr-2">Bagages possibles:</span> 1</p>
 <div class="flex flex-row items-center m-2 gap-3">
 <p class="font-semibold">Prix final:</p>
-<p class="font-semibold text-2xl text-[#20FF5E] ml-2">24 euros</p>
+<p class="font-semibold text-2xl text-[#97F887] ml-2">24 euros</p>
 </div>
 <p class="font-semibold m-2">Arrêt possible en cours de route:</p>
    <div class="ml-6">

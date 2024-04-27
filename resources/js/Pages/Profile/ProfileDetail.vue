@@ -28,7 +28,7 @@ function ValidateUser () {
        
         <AuthenticatedLayout>
             <template #header>
-            <h2 class="font-semibold text-xl text-[#20FF5E] leading-tight">Profil Transporteur</h2>
+            <h2 class="font-semibold text-xl text-[#97F887] leading-tight">Profil Transporteur</h2>
         </template>
            <div class="mt-4">
             <div class=" bg-white rounded-xl py-10">
@@ -80,7 +80,7 @@ function ValidateUser () {
             </div>
             <Modal :show="isShowable">
                 <p class="text-lg text-red-500 m-6" v-if="!validate">Client rejeté</p>
-                <p class="text-lg text-[#20FF5E] m-6" v-else>Client validé</p>
+                <p class="text-lg text-[#97F887] m-6" v-else>Client validé</p>
                 <div class="flex flex-row justify-end">
           <PrimaryButton @click=" isShowable = !isShowable">
               OK
